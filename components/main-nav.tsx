@@ -84,11 +84,10 @@ export function MainNav() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-8 h-8 rounded-lg overflow-hidden">
+        <Link href="/" className="flex items-center">
+          <div className="relative h-10 w-[160px] sm:w-[200px] overflow-hidden">
             <Image src={parklanPaloozaLogo} alt="Parklan" fill className="object-contain" priority />
           </div>
-          <span className="font-bold text-lg glow-text hidden sm:inline">GameVerse</span>
         </Link>
 
         {/* Desktop Navigation - Main items + More dropdown */}

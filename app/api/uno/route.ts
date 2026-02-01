@@ -1087,11 +1087,17 @@ export async function GET(request: Request) {
     } catch {}
 
     const url = new URL(request.url)
+    const socketOriginOverride =
+      (typeof process.env.NEXT_PUBLIC_UNO_SOCKET_ORIGIN === "string" && process.env.NEXT_PUBLIC_UNO_SOCKET_ORIGIN.trim()) ||
+      (typeof process.env.UNO_SOCKET_ORIGIN === "string" && process.env.UNO_SOCKET_ORIGIN.trim()) ||
+      ""
     const forwardedProto = request.headers.get("x-forwarded-proto")
     const proto = forwardedProto ? forwardedProto.split(",")[0]!.trim() : url.protocol.replace(":", "")
     const hostHeader = request.headers.get("x-forwarded-host") || request.headers.get("host")
     let socketOrigin = url.origin
-    if (hostHeader) {
+    if (socketOriginOverride) {
+      socketOrigin = socketOriginOverride
+    } else if (hostHeader) {
       const host = hostHeader.split(",")[0]!.trim().replace(/^0\\.0\\.0\\.0(?=[:$])/, "localhost")
       socketOrigin = `${proto}://${host}`
     } else {

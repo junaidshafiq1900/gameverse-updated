@@ -51,6 +51,10 @@ export default function UnoClassicPage() {
 
     const start = async () => {
       try {
+        if (process.env.NODE_ENV !== "development") {
+          setServerReady(true)
+          return
+        }
         setServerStarting(true)
         const res = await fetch("/api/uno-classic/start", { method: "POST" })
         const data = (await res.json().catch(() => null)) as any

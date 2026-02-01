@@ -91,11 +91,10 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="relative w-10 h-10 rounded-lg overflow-hidden">
+        <div className="flex items-center">
+          <div className="relative h-10 w-[160px] sm:h-12 sm:w-[200px] overflow-hidden">
             <Image src={parklanPaloozaLogo} alt="Parklan" fill className="object-contain" priority />
           </div>
-          <span className="font-display text-xl font-bold text-secondary">GameVerse</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
