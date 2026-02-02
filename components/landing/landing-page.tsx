@@ -170,7 +170,6 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative mb-6">
-            <div className="h-10 md:h-12 mb-8" aria-hidden />
             <div className="absolute left-1/2 -top-32 -translate-x-1/2 z-10">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                 <Image
