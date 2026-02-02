@@ -186,9 +186,9 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            Your Ultimate <span className="gv-gradient-text">Gaming</span>
+            Your Ultimate <span className="gv-gradient-text">Virtual</span>
             <br />
-            Community Awaits
+            Hangout Awaits
           </motion.h1>
 
           <motion.p
@@ -197,8 +197,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            Play games, compete on leaderboards, chat with friends, and join tournaments. All in one place built for
-            gamers, by gamers.
+            Play games, chat and hang out virtually with your friends & family
           </motion.p>
 
           <motion.div
@@ -269,7 +268,7 @@ const FeaturesSection = () => {
     {
       icon: Gamepad2,
       title: "Game Library",
-      description: "Access 50+ games including Card Games, Casino, Trivia, and Puzzles. New games added regularly.",
+      description: "Access games including Card Games, Casino, Trivia, and Puzzles. New games added regularly.",
       gradient: "from-primary to-primary/50",
     },
     {
@@ -280,7 +279,7 @@ const FeaturesSection = () => {
     },
     {
       icon: MessageCircle,
-      title: "Discord-Style Chat",
+      title: "Looza Chat",
       description: "Join channels, chat with friends, and connect with the gaming community in real-time.",
       gradient: "from-primary to-secondary",
     },
@@ -360,7 +359,7 @@ const HowItWorks = () => {
       number: "02",
       icon: Gamepad2,
       title: "Choose a Game",
-      description: "Browse our library of 50+ games. From casual puzzles to competitive tournaments, find your favorites.",
+      description: "Access games including Card Games, Casino, Trivia, Puzzles and More. New games added regularly.",
       color: "from-secondary to-secondary/50",
     },
     {
