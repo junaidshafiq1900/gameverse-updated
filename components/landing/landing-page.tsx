@@ -12,6 +12,7 @@ import { createClient } from "@/lib/supabase/client"
 import { getAvatarUrl } from "@/lib/utils"
 import type { User } from "@supabase/supabase-js"
 import parklanPaloozaLogo from "../../parklan-palooza.png"
+import parklanPaloozaHeroLogo from "../../parklan-palooza-hero-logo.png"
 
 export function LandingPage() {
   return <Landing />
@@ -174,6 +175,14 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
+            <Image
+              src={parklanPaloozaHeroLogo}
+              alt="Parklan Palooza"
+              width={220}
+              height={60}
+              className="h-10 md:h-12 w-auto mx-auto mb-2 select-none pointer-events-none"
+              priority
+            />
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
               2,500+ Players Online Now
@@ -206,17 +215,11 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <Button asChild size="lg" variant="default" className="text-lg px-8 gv-glow-purple">
+            <Button asChild size="lg" variant="default" className="text-lg px-8 gv-glow-purple mx-auto">
               <Link href="/register">
                 <Gamepad2 className="w-5 h-5 mr-2" />
                 Start Playing Free
               </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 group backdrop-blur-sm" asChild>
-              <a href="#games">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </a>
             </Button>
           </motion.div>
 
@@ -227,7 +230,6 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-4"
           >
             {[
-              { icon: Gamepad2, label: "50+ Games" },
               { icon: Users, label: "Multiplayer" },
               { icon: Trophy, label: "Tournaments" },
               { icon: MessageCircle, label: "Live Chat" },
